@@ -10,7 +10,11 @@ function multiply(n1, n2) {
   return parseFloat((n1 * n2).toFixed(4));
 }
 function divide(n1, n2) {
-  return parseFloat((n1 / n2).toFixed(4));
+  if (n1 === 0 || n2 === 0) {
+    return `ERROR`
+  } else {
+    return parseFloat((n1 / n2).toFixed(4));
+  }
 }
 function mathExpression(op1, op, op2) {  
   switch (op) {
@@ -54,10 +58,10 @@ OPERATORS.forEach(op => op.addEventListener('click', (e) => {
     operator = e.target.id;
     DISPLAY__FIRST.textContent = e.target.textContent + ' ';
     DISPLAY__SECOND.textContent = num1;
-  } else{
+  } else{    
     DISPLAY__SECOND.textContent = '';
     DISPLAY__FIRST.textContent = mathExpression(Number(num1), operator, Number(num2));
-    num1 = '';
+    num1 = Number(DISPLAY__FIRST.textContent);
     num2 = '';
     operator = '';
     time = 0;

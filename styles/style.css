@@ -13,7 +13,7 @@ body{
   align-items: center;
 }
 .display{
-  width: 7rem;
+  width: inherit;
   height: 4rem; 
   border-bottom: 1px solid black;
   display: flex;
@@ -27,10 +27,10 @@ body{
   justify-content: end  ;
 }
 .calculator{
-  width: 7rem;
+  width: 14rem;
   display: flex;
   flex-wrap: wrap;
-  gap: .5rem;
+  gap: 1rem;
 }
 .operators{
   display: flex;
@@ -40,11 +40,11 @@ body{
 }
 .operator{
   width: calc(50% - .25rem);
-  height: 2rem;
+  height: 4rem;
 }
 .digit{
-  width: 2rem;
-  height: 2rem;
+  width: 4rem;
+  height: 4rem;
 }
 .digit--zero, .operator--clear{
   flex: 1;
